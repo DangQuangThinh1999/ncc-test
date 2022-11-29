@@ -1,11 +1,10 @@
 .wrapper {
   display: flex;
-  height: 935px;
+  height: max-content;
 }
 /* content */
 .wrapper .grid {
   background-color: white;
-  position: relative;
 }
 
 /* reset css */
@@ -23,11 +22,38 @@ ul {
 .grid .images {
   text-align: center;
 }
+.grid .images img {
+  height: 200px;
+  width: 400px;
+}
+/* tablet */
+@media (max-width: 740px) {
+  .grid .images img {
+    height: 100px;
+    width: 200px;
+  }
+  .grid {
+    padding: 0 50px;
+  }
+}
+/* PC */
+@media (max-width: 375px) {
+  .grid {
+    padding: 0 0;
+  }
+  .grid .images img {
+    height: 45%;
+    width: 45%;
+  }
+  .sidebar {
+    display: none;
+  }
+}
 /* info-ncc */
 
 .grid .info-ncc {
   text-align: center;
-  height: 210px;
+  height: max-content;
   padding: 38px;
   background-color: #efefef;
   border: #191718;
@@ -41,8 +67,8 @@ ul {
 
 .grid .info-ncc .inner {
   margin: auto;
-  width: 772px;
-  height: 95px;
+  padding: 0 50px;
+
   text-align: center;
 }
 /* detail-list */
@@ -68,8 +94,7 @@ ul {
 }
 /* footer */
 .footer {
-  position: absolute;
-  bottom: 0;
+  margin-bottom: 0px;
 }
 footer {
   margin-bottom: 10px;
